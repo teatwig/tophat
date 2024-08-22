@@ -17,7 +17,7 @@
 // You should have received a copy of the GNU General Public License
 // along with TopHat. If not, see <https://www.gnu.org/licenses/>.
 
-import Gio from 'gi://Gio';
+import GioUnix from 'gi://GioUnix';
 import GTop from 'gi://GTop';
 import Clutter from 'gi://Clutter';
 
@@ -165,9 +165,9 @@ export function roundMax(val) {
  */
 export function getPartitions() {
     let mounts = [];
-    let mountPoints = Gio.unix_mount_points_get();
+    let mountPoints = GioUnix.mount_points_get();
     if (!mountPoints || !mountPoints[0]) {
-        console.warn('[TopHat] Gio.unix_mount_points_get() returned an empty result');
+        console.warn('[TopHat] GioUnix.mount_points_get() returned an empty result');
         return [];
     }
 
@@ -181,7 +181,7 @@ export function getPartitions() {
             // TODO do something similar for zfs subvolumes?
             let shortestPath = mountMap.get(devPath);
             if ((shortestPath === undefined) || mountPath.length < shortestPath.length) {
-                let mountEntry = Gio.unix_mount_at(mountPath);
+                let mountEntry = GioUnix.mount_at(mountPath);
                 if (mountEntry && mountEntry[0]) {
                     mountMap.set(devPath, new Mount(devPath, mountPath, entry.get_fs_type()));
                 }
