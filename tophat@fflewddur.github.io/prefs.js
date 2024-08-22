@@ -86,7 +86,7 @@ export default class TopHatPrefs extends ExtensionPreferences {
         choices = new Gtk.StringList();
         let parts = Shared.getPartitions();
         parts.forEach(p => {
-            choices.append(p);
+            choices.append(p.mountPath);
         });
         configHandler.setPartitions(choices);
         this.addComboRow(_('Filesystem to monitor'), choices, 'mountToMonitor', group, configHandler);

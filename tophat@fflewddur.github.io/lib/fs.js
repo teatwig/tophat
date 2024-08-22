@@ -352,10 +352,20 @@ export const FileSystemMonitor = GObject.registerClass({
         let mounts = Shared.getPartitions();
         let row = 0;
         let fsDetails = new Map();
-        mounts.forEach(mountPath => {
-            let fsu = new GTop.glibtop_fsusage();
-            GTop.glibtop_get_fsusage(fsu, mountPath);
-            let fs = new FSUsage(mountPath, fsu.blocks * fsu.block_size, fsu.bfree * fsu.block_size);
+        mounts.forEach(mount => {
+            const mountPath = mount.mountPath;
+            let fs;
+            if (mount.fsType === 'zfs') {
+                const res = GLib.spawn_command_line_sync(`zfs list ${mount.devicePath} -p -o used,avail`).toString();
+                const [_full, usedStr, availStr] = res.match(/\s+USED\s+AVAIL\s+(\d+)\s+(\d+)/);
+                const used = Number(usedStr);
+                const avail = Number(availStr);
+                fs = new FSUsage(mountPath, used + avail, avail);
+            } else {
+                let fsu = new GTop.glibtop_fsusage();
+                GTop.glibtop_get_fsusage(fsu, mountPath);
+                fs = new FSUsage(mountPath, fsu.blocks * fsu.block_size, fsu.bfree * fsu.block_size);
+            }
 
             // Remove existing rows
             let label = this.menuFSDetails.get_child_at(0, row);

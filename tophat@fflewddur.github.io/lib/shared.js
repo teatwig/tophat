@@ -31,6 +31,14 @@ export class TopProcess {
     }
 }
 
+export class Mount {
+    constructor(devicePath, mountPath, fsType) {
+        this.devicePath = devicePath;
+        this.mountPath = mountPath;
+        this.fsType = fsType;
+    }
+}
+
 /**
  * Return an array of active processes.
  */
@@ -170,11 +178,12 @@ export function getPartitions() {
         if (!entry.is_loopback()) {
             // Only show each physical disk partition once
             // If a partition has sub-volumes, use the one with the shortest path (e.g., /) as the label
+            // TODO do something similar for zfs subvolumes?
             let shortestPath = mountMap.get(devPath);
             if ((shortestPath === undefined) || mountPath.length < shortestPath.length) {
                 let mountEntry = Gio.unix_mount_at(mountPath);
                 if (mountEntry && mountEntry[0]) {
-                    mountMap.set(devPath, mountPath);
+                    mountMap.set(devPath, new Mount(devPath, mountPath, entry.get_fs_type()));
                 }
             }
         }
