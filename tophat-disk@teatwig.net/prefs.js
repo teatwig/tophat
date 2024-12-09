@@ -52,27 +52,7 @@ export default class TopHatPrefs extends ExtensionPreferences {
         this.addActionRow(_('Show icons beside monitors'), 'show-icons', group, configHandler);
         this.addActionRow(_('Show animations'), 'show-animations', group, configHandler);
 
-        group = new Adw.PreferencesGroup({title: _('Processor')});
-        this.addActionRow(_('Show the CPU monitor'), 'show-cpu', group, configHandler);
-        choices = new Gtk.StringList();
-        choices.append(_('Usage meter'));
-        choices.append(_('Numeric value'));
-        choices.append(_('Both meter and value'));
-        this.addComboRow(_('Show as'), choices, 'cpuDisplay', group, configHandler);
-        this.addActionRow(_('Show each core'), 'cpu-show-cores', group, configHandler);
-        page.add(group);
-
-        group = new Adw.PreferencesGroup({title: _('Memory')});
-        this.addActionRow(_('Show the memory monitor'), 'show-mem', group, configHandler);
-        choices = new Gtk.StringList();
-        choices.append(_('Usage meter'));
-        choices.append(_('Numeric value'));
-        choices.append(_('Both meter and value'));
-        this.addComboRow(_('Show as'), choices, 'memDisplay', group, configHandler);
-        page.add(group);
-
         group = new Adw.PreferencesGroup({title: _('Disk')});
-        this.addActionRow(_('Show the disk monitor'), 'show-disk', group, configHandler);
         choices = new Gtk.StringList();
         choices.append(_('Available storage'));
         choices.append(_('Disk activity'));
@@ -90,14 +70,6 @@ export default class TopHatPrefs extends ExtensionPreferences {
         });
         configHandler.setPartitions(choices);
         this.addComboRow(_('Filesystem to monitor'), choices, 'mountToMonitor', group, configHandler);
-        page.add(group);
-
-        group = new Adw.PreferencesGroup({title: _('Network')});
-        this.addActionRow(_('Show the network monitor'), 'show-net', group, configHandler);
-        choices = new Gtk.StringList();
-        choices.append(_('Bytes'));
-        choices.append(_('Bits'));
-        this.addComboRow(_('Measurement unit'), choices, 'networkUnit', group, configHandler);
         page.add(group);
 
         window.set_default_size(400, 0);

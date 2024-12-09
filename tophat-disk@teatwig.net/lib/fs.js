@@ -151,7 +151,6 @@ export const FileSystemMonitor = GObject.registerClass({
         this.refreshFSTimer = 0;
         this.refreshIOTimer = 0;
 
-        configHandler.settings.bind('show-disk', this, 'visible', Gio.SettingsBindFlags.GET);
         configHandler.settings.bind('refresh-rate', this, 'refresh-rate', Gio.SettingsBindFlags.GET);
         configHandler.settings.bind('show-icons', this.icon, 'visible', Gio.SettingsBindFlags.GET);
         configHandler.settings.bind('meter-fg-color', this, 'meter-fg-color', Gio.SettingsBindFlags.GET);

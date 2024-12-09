@@ -18,11 +18,7 @@
 // along with TopHat. If not, see <https://www.gnu.org/licenses/>.
 
 // Time between resource updates, in milliseconds
-export const UPDATE_INTERVAL_CPU = 2000;
-export const UPDATE_INTERVAL_MEM = 2000;
-export const UPDATE_INTERVAL_NET = 2000;
 export const UPDATE_INTERVAL_DISK = 5000;
-export const UPDATE_INTERVAL_PROCLIST = 5000;
 
 export const METER_BG_COLOR = '#00000033';
 export const METER_GRID_COLOR = '#77777766';
@@ -62,22 +58,6 @@ export class ConfigHandler {
         this._settings.set_enum('position-in-panel', value);
     }
 
-    get cpuDisplay() {
-        return this._settings.get_enum('cpu-display');
-    }
-
-    set cpuDisplay(value) {
-        this._settings.set_enum('cpu-display', value);
-    }
-
-    get memDisplay() {
-        return this._settings.get_enum('mem-display');
-    }
-
-    set memDisplay(value) {
-        this._settings.set_enum('mem-display', value);
-    }
-
     get diskDisplay() {
         return this._settings.get_enum('disk-display');
     }
@@ -108,22 +88,6 @@ export class ConfigHandler {
 
     set meterBarWidth(value) {
         this._settings.set_int('meter-bar-width', value);
-    }
-
-    get cpuShowCores() {
-        return this._settings.get_boolean('cpu-show-cores');
-    }
-
-    set cpuShowCores(value) {
-        this._settings.set_boolean('cpu-show-cores', value);
-    }
-
-    get networkUnit() {
-        return this._settings.get_enum('network-usage-unit');
-    }
-
-    set networkUnit(value) {
-        this._settings.set_enum('network-usage-unit', value);
     }
 
     get mountToMonitor() {

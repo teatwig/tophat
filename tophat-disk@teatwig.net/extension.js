@@ -23,9 +23,6 @@ let missingLibs = [];
 
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 import {Extension, gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
-import * as Cpu from './lib/cpu.js';
-import * as Mem from './lib/mem.js';
-import * as Net from './lib/net.js';
 import * as FS from './lib/fs.js';
 
 // TODO: Update the UI if we have trouble loading GTop + friends
@@ -49,14 +46,8 @@ class TopHat {
     constructor(settings, metadata) {
         this.configHandler = new Config.ConfigHandler(settings, metadata);
         this.container = new Container.TopHatContainer();
-        this.cpu = new Cpu.CpuMonitor(this.configHandler);
-        this.mem = new Mem.MemMonitor(this.configHandler);
-        this.net = new Net.NetMonitor(this.configHandler);
         this.fs = new FS.FileSystemMonitor(this.configHandler);
-        this.container.addMonitor(this.cpu);
-        this.container.addMonitor(this.mem);
         this.container.addMonitor(this.fs);
-        this.container.addMonitor(this.net);
         this.configHandler.connect_void('position-in-panel', () => {
             this.moveWithinPanel();
         });

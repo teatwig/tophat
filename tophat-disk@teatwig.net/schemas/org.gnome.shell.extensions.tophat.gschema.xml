@@ -7,10 +7,6 @@
     <value value="3" nick="right"/>
     <value value="4" nick="rightedge"/>
   </enum>
-  <enum id="org.gnome.shell.extensions.tophat-disk.network-unit">
-    <value value="0" nick="bytes"/>
-    <value value="1" nick="bits"/>
-  </enum>
   <enum id="org.gnome.shell.extensions.tophat-disk.visualization">
     <value value="0" nick="chart"/>
     <value value="1" nick="numeric"/>
@@ -33,16 +29,6 @@
       <summary>Position in the panel</summary>
       <description>Where in the panel the monitors should be positioned.</description>
     </key>
-        <key name="cpu-display" enum="org.gnome.shell.extensions.tophat-disk.visualization">
-      <default>'chart'</default>
-      <summary>How to visualize the CPU monitor</summary>
-      <description>How to visualize the CPU monitor</description>
-    </key>
-    <key name="mem-display" enum="org.gnome.shell.extensions.tophat-disk.visualization">
-      <default>'chart'</default>
-      <summary>How to visualize the memory monitor</summary>
-      <description>How to visualize the memory monitor</description>
-    </key>
     <key name="disk-display" enum="org.gnome.shell.extensions.tophat-disk.visualization">
       <default>'chart'</default>
       <summary>How to visualize the disk monitor</summary>
@@ -57,26 +43,6 @@
       <default>true</default>
       <summary>Show icons beside monitors</summary>
       <description>Display icons next to each monitor to help identify them.</description>
-    </key>
-    <key name="show-cpu" type="b">
-      <default>true</default>
-      <summary>Show the CPU monitor</summary>
-      <description>Show the CPU monitor.</description>
-    </key>
-    <key name="show-disk" type="b">
-      <default>true</default>
-      <summary>Show the filesystem monitor</summary>
-      <description>Show the filesystem monitor.</description>
-    </key>
-    <key name="show-mem" type="b">
-      <default>true</default>
-      <summary>Show the memory monitor</summary>
-      <description>Show the memory monitor.</description>
-    </key>
-    <key name="show-net" type="b">
-      <default>true</default>
-      <summary>Show the network monitor</summary>
-      <description>Show the network monitor.</description>
     </key>
     <key name="show-animations" type="b">
       <default>true</default>
@@ -97,16 +63,6 @@
       <default>'medium'</default>
       <summary>How frequently TopHat will check system resource usage</summary>
       <description>This controls how frequently Tophat will check system resource usage. 'fast' will update more often but may negatively impact system performance. 'slow' will update less often and may improve system performance.</description>
-    </key>
-    <key name="cpu-show-cores" type="b">
-      <default>true</default>
-      <summary>Show a meter bar for each CPU core</summary>
-      <description>When true, the CPU monitors will show a meter bar representing each CPU core. When false, one bar will represent all CPU usage.</description>
-    </key>
-    <key name="network-usage-unit" enum="org.gnome.shell.extensions.tophat-disk.network-unit">
-      <default>'bytes'</default>
-      <summary>Unit for showing network usage</summary>
-      <description>Show network usage in bytes or bits.</description>
     </key>
     <key name="disk-monitor-mode" enum="org.gnome.shell.extensions.tophat-disk.disk-monitor-mode">
       <default>'storage'</default>
