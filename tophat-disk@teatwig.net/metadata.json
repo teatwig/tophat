@@ -1,0 +1,10 @@
+{
+    "uuid": "tophat-disk@teatwig.net",
+    "name": "TopHat Disk",
+    "description": "View disk activity in the GNOME top bar.",
+    "version": 15,
+    "shell-version": [ "45", "46", "47" ],
+    "url": "https://github.com/teatwig/tophat",
+    "gettext-domain": "tophat-disk@teatwig.net",
+    "settings-schema": "org.gnome.shell.extensions.tophat-disk"
+}

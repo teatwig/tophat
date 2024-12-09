@@ -17,7 +17,7 @@ export class File {
         try {
             exists = this.file.query_exists(null);
         } catch (err) {
-            console.error(`[TopHat] Error reading ${this.file.get_path()}: ${err}`);
+            console.error(`[TopHat Disk] Error reading ${this.file.get_path()}: ${err}`);
         }
         return exists;
     }
@@ -63,7 +63,7 @@ export class File {
             const decoder = new TextDecoder('utf-8');
             contents = decoder.decode(contents).trim();
         } catch (e) {
-            console.error(`[TopHat] Error reading ${this.file.get_path()}: ${e}`);
+            console.error(`[TopHat Disk] Error reading ${this.file.get_path()}: ${e}`);
         }
         return contents;
     }

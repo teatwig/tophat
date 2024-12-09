@@ -355,10 +355,10 @@ export const TopHatMonitor = GObject.registerClass({
         button.connect('clicked', () => {
             this.menu.close(true);
             try {
-                let obj = Extension.lookupByUUID('tophat@fflewddur.github.io');
+                let obj = Extension.lookupByUUID('tophat-disk@teatwig.net');
                 obj.openPreferences();
             } catch (err) {
-                console.error(`[TopHat] Error opening settings: ${err}`);
+                console.error(`[TopHat Disk] Error opening settings: ${err}`);
             }
         });
         box.add_child(button);

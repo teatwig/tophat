@@ -352,7 +352,7 @@ export const CpuMonitor = GObject.registerClass({
                 this.hasProc = false;
             });
         }).catch(err => {
-            console.error(`[TopHat] Error finding temperature monitors: ${err}`);
+            console.error(`[TopHat Disk] Error finding temperature monitors: ${err}`);
             this.hasTemp = false;
         });
     }
@@ -392,7 +392,7 @@ export const CpuMonitor = GObject.registerClass({
                 }
                 resolve(this.cpuTempMonitors.size > 0);
             }).catch(err => {
-                console.error(`[TopHat] Error listing files in ${basePath}: ${err}`);
+                console.error(`[TopHat Disk] Error listing files in ${basePath}: ${err}`);
                 reject(err);
             });
         });
@@ -439,7 +439,7 @@ export const CpuMonitor = GObject.registerClass({
         this.history.push(this.cpuUsage.copy());
 
         // Update UI
-        // console.debug(`[TopHat] CPU: ${this.cpuUsage}% on ${this.cpuCores} cores (${this.cpuCoreUsage.join()})`);
+        // console.debug(`[TopHat Disk] CPU: ${this.cpuUsage}% on ${this.cpuCores} cores (${this.cpuCoreUsage.join()})`);
         let cpuTotal = this.cpuUsage.total();
         this.usage.text = `${cpuTotal}%`;
 
@@ -506,7 +506,7 @@ export const CpuMonitor = GObject.registerClass({
                 });
             }
         }).catch(err => {
-            console.error(`[TopHat] Error reading /proc/cpuinfo: ${err}`);
+            console.error(`[TopHat Disk] Error reading /proc/cpuinfo: ${err}`);
             this.hasProc = false;
         });
     }
@@ -517,7 +517,7 @@ export const CpuMonitor = GObject.registerClass({
                 temp = parseInt(temp);
                 this.menuCpuTemps[id].text = `${(temp / 1000).toFixed(0)} °C`;
             }).catch(err => {
-                console.error(`[TopHat] Error reading ${path}: ${err}`);
+                console.error(`[TopHat Disk] Error reading ${path}: ${err}`);
                 this.hasTemp = false;
             });
         });

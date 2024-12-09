@@ -36,7 +36,7 @@ export const TopHatContainer = GObject.registerClass(
         }
 
         addMonitor(monitor) {
-            // console.debug(`[TopHat] addMonitor(${monitor.name})`);
+            // console.debug(`[TopHat Disk] addMonitor(${monitor.name})`);
             this.monitors.push(monitor);
             this.box.add_child(monitor);
         }

@@ -64,7 +64,7 @@ class TopHat {
 
     addToPanel() {
         let pref = this._getPreferredPanelBoxAndPosition();
-        Main.panel.addToStatusArea('TopHat', this.container, pref.position, pref.box);
+        Main.panel.addToStatusArea('TopHat-Disk', this.container, pref.position, pref.box);
         this.container.monitors.forEach(monitor => {
             // console.debug(`Adding menu to manager for ${monitor.name}`);
             Main.panel.menuManager.addMenu(monitor.menu);
@@ -80,7 +80,7 @@ class TopHat {
             right: Main.panel._rightBox,
         };
         let boxContainer = boxes[pref.box] || this._rightBox;
-        Main.panel._addToPanelBox('TopHat', this.container, pref.position, boxContainer);
+        Main.panel._addToPanelBox('TopHat-Disk', this.container, pref.position, boxContainer);
     }
 
     _getPreferredPanelBoxAndPosition() {
@@ -125,7 +125,7 @@ export default class TopHatExt extends Extension {
     }
 
     enable() {
-        // console.debug(`[TopHat] enabling version ${this.metadata.version}`);
+        // console.debug(`[TopHat Disk] enabling version ${this.metadata.version}`);
         if (depFailures.length > 0) {
             console.warn(`[${this.metadata.name}] missing dependencies, showing problem reporter instead`);
             // const Problem = this.imports.lib.problem;

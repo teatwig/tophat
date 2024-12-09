@@ -167,7 +167,7 @@ export function getPartitions() {
     let mounts = [];
     let mountPoints = GioUnix.mount_points_get();
     if (!mountPoints || !mountPoints[0]) {
-        console.warn('[TopHat] GioUnix.mount_points_get() returned an empty result');
+        console.warn('[TopHat Disk] GioUnix.mount_points_get() returned an empty result');
         return [];
     }
 
@@ -189,7 +189,7 @@ export function getPartitions() {
         }
     });
     mounts = Array.from(mountMap.values());
-    // console.debug(`[TopHat] mounts = ${mounts}`);
+    // console.debug(`[TopHat Disk] mounts = ${mounts}`);
     return mounts;
 }
 

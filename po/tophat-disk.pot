@@ -1,0 +1,310 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Todd Kulesza
+# This file is distributed under the same license as the TopHat package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: TopHat\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-09 22:36+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: tophat-disk@teatwig.net/prefs.js:36
+msgid "General"
+msgstr ""
+
+#: tophat-disk@teatwig.net/prefs.js:40
+msgid "Left edge"
+msgstr ""
+
+#: tophat-disk@teatwig.net/prefs.js:41
+msgid "Left"
+msgstr ""
+
+#: tophat-disk@teatwig.net/prefs.js:42
+msgid "Center"
+msgstr ""
+
+#: tophat-disk@teatwig.net/prefs.js:43
+msgid "Right"
+msgstr ""
+
+#: tophat-disk@teatwig.net/prefs.js:44
+msgid "Right edge"
+msgstr ""
+
+#: tophat-disk@teatwig.net/prefs.js:45
+msgid "Position in panel"
+msgstr ""
+
+#: tophat-disk@teatwig.net/prefs.js:47
+msgid "Slow"
+msgstr ""
+
+#: tophat-disk@teatwig.net/prefs.js:48
+msgid "Medium"
+msgstr ""
+
+#: tophat-disk@teatwig.net/prefs.js:49
+msgid "Fast"
+msgstr ""
+
+#: tophat-disk@teatwig.net/prefs.js:50
+msgid "Refresh speed"
+msgstr ""
+
+#: tophat-disk@teatwig.net/prefs.js:51
+msgid "Meter color"
+msgstr ""
+
+#: tophat-disk@teatwig.net/prefs.js:52
+msgid "Show icons beside monitors"
+msgstr ""
+
+#: tophat-disk@teatwig.net/prefs.js:53
+msgid "Show animations"
+msgstr ""
+
+#: tophat-disk@teatwig.net/prefs.js:55
+msgid "Processor"
+msgstr ""
+
+#: tophat-disk@teatwig.net/prefs.js:56
+msgid "Show the CPU monitor"
+msgstr ""
+
+#: tophat-disk@teatwig.net/prefs.js:58 tophat-disk@teatwig.net/prefs.js:68
+#: tophat-disk@teatwig.net/prefs.js:82
+msgid "Usage meter"
+msgstr ""
+
+#: tophat-disk@teatwig.net/prefs.js:59 tophat-disk@teatwig.net/prefs.js:69
+#: tophat-disk@teatwig.net/prefs.js:83
+msgid "Numeric value"
+msgstr ""
+
+#: tophat-disk@teatwig.net/prefs.js:60 tophat-disk@teatwig.net/prefs.js:70
+#: tophat-disk@teatwig.net/prefs.js:84
+msgid "Both meter and value"
+msgstr ""
+
+#: tophat-disk@teatwig.net/prefs.js:61 tophat-disk@teatwig.net/prefs.js:71
+msgid "Show as"
+msgstr ""
+
+#: tophat-disk@teatwig.net/prefs.js:62
+msgid "Show each core"
+msgstr ""
+
+#: tophat-disk@teatwig.net/prefs.js:65
+msgid "Memory"
+msgstr ""
+
+#: tophat-disk@teatwig.net/prefs.js:66
+msgid "Show the memory monitor"
+msgstr ""
+
+#: tophat-disk@teatwig.net/prefs.js:74
+msgid "Disk"
+msgstr ""
+
+#: tophat-disk@teatwig.net/prefs.js:75
+msgid "Show the disk monitor"
+msgstr ""
+
+#: tophat-disk@teatwig.net/prefs.js:77
+msgid "Available storage"
+msgstr ""
+
+#: tophat-disk@teatwig.net/prefs.js:78 tophat-disk@teatwig.net/lib/fs.js:269
+msgid "Disk activity"
+msgstr ""
+
+#: tophat-disk@teatwig.net/prefs.js:79
+msgid "Storage and activity"
+msgstr ""
+
+#: tophat-disk@teatwig.net/prefs.js:80
+msgid "Monitor shows"
+msgstr ""
+
+#: tophat-disk@teatwig.net/prefs.js:85
+msgid "Show available storage as"
+msgstr ""
+
+#: tophat-disk@teatwig.net/prefs.js:92
+msgid "Filesystem to monitor"
+msgstr ""
+
+#: tophat-disk@teatwig.net/prefs.js:95
+msgid "Network"
+msgstr ""
+
+#: tophat-disk@teatwig.net/prefs.js:96
+msgid "Show the network monitor"
+msgstr ""
+
+#: tophat-disk@teatwig.net/prefs.js:98
+msgid "Bytes"
+msgstr ""
+
+#: tophat-disk@teatwig.net/prefs.js:99
+msgid "Bits"
+msgstr ""
+
+#: tophat-disk@teatwig.net/prefs.js:100
+msgid "Measurement unit"
+msgstr ""
+
+#: tophat-disk@teatwig.net/lib/cpu.js:224
+msgid "Processor usage"
+msgstr ""
+
+#: tophat-disk@teatwig.net/lib/cpu.js:227
+msgid "Processor utilization:"
+msgstr ""
+
+#: tophat-disk@teatwig.net/lib/cpu.js:255 tophat-disk@teatwig.net/lib/fs.js:304
+#: tophat-disk@teatwig.net/lib/mem.js:273
+#: tophat-disk@teatwig.net/lib/net.js:191
+#, javascript-format
+msgid "%d min ago"
+msgid_plural "%d mins ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#: tophat-disk@teatwig.net/lib/cpu.js:258 tophat-disk@teatwig.net/lib/fs.js:307
+#: tophat-disk@teatwig.net/lib/mem.js:276
+#: tophat-disk@teatwig.net/lib/net.js:194
+msgid "now"
+msgstr ""
+
+#: tophat-disk@teatwig.net/lib/cpu.js:261 tophat-disk@teatwig.net/lib/fs.js:310
+#: tophat-disk@teatwig.net/lib/mem.js:279
+msgid "Top processes"
+msgstr ""
+
+#: tophat-disk@teatwig.net/lib/cpu.js:278
+msgid "System uptime"
+msgstr ""
+
+#: tophat-disk@teatwig.net/lib/cpu.js:315
+msgid "model n/a"
+msgstr ""
+
+#: tophat-disk@teatwig.net/lib/cpu.js:324
+msgid "Frequency:"
+msgstr ""
+
+#: tophat-disk@teatwig.net/lib/cpu.js:330
+#: tophat-disk@teatwig.net/lib/cpu.js:344 tophat-disk@teatwig.net/lib/fs.js:274
+#: tophat-disk@teatwig.net/lib/fs.js:280
+msgid "n/a"
+msgstr ""
+
+#: tophat-disk@teatwig.net/lib/cpu.js:338
+msgid "Temperature:"
+msgstr ""
+
+#: tophat-disk@teatwig.net/lib/cpu.js:599
+#, javascript-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: tophat-disk@teatwig.net/lib/cpu.js:602
+#, javascript-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: tophat-disk@teatwig.net/lib/cpu.js:604
+#, javascript-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: tophat-disk@teatwig.net/lib/fs.js:272
+msgid "Writing:"
+msgstr ""
+
+#: tophat-disk@teatwig.net/lib/fs.js:278
+msgid "Reading:"
+msgstr ""
+
+#: tophat-disk@teatwig.net/lib/fs.js:295
+msgid "Write"
+msgstr ""
+
+#: tophat-disk@teatwig.net/lib/fs.js:300
+msgid "Read"
+msgstr ""
+
+#: tophat-disk@teatwig.net/lib/fs.js:316
+msgid "Writing"
+msgstr ""
+
+#: tophat-disk@teatwig.net/lib/fs.js:318
+msgid "Reading"
+msgstr ""
+
+#: tophat-disk@teatwig.net/lib/fs.js:334
+msgid "Filesystem usage"
+msgstr ""
+
+#: tophat-disk@teatwig.net/lib/mem.js:231
+msgid "Memory usage"
+msgstr ""
+
+#: tophat-disk@teatwig.net/lib/mem.js:234
+msgid "RAM used:"
+msgstr ""
+
+#: tophat-disk@teatwig.net/lib/mem.js:239
+#: tophat-disk@teatwig.net/lib/mem.js:249
+msgid "size n/a"
+msgstr ""
+
+#: tophat-disk@teatwig.net/lib/mem.js:244
+msgid "Swap used:"
+msgstr ""
+
+#: tophat-disk@teatwig.net/lib/net.js:148
+msgid "Network activity"
+msgstr ""
+
+#: tophat-disk@teatwig.net/lib/net.js:151
+msgid "Sending:"
+msgstr ""
+
+#: tophat-disk@teatwig.net/lib/net.js:156
+msgid "Receiving:"
+msgstr ""
+
+#: tophat-disk@teatwig.net/lib/net.js:161
+msgid "Total sent:"
+msgstr ""
+
+#: tophat-disk@teatwig.net/lib/net.js:166
+msgid "Total received:"
+msgstr ""
+
+#: tophat-disk@teatwig.net/lib/net.js:182
+msgid "Send"
+msgstr ""
+
+#: tophat-disk@teatwig.net/lib/net.js:187
+msgid "Recv"
+msgstr ""

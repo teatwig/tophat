@@ -139,7 +139,7 @@ class ProcessMemUse {
 export const MemMonitor = GObject.registerClass(
     class TopHatMemMonitor extends Monitor.TopHatMonitor {
         _init(configHandler) {
-            super._init('[TopHat] Memory Monitor');
+            super._init('[TopHat Disk] Memory Monitor');
 
             // Initialize libgtop values
             this.mem = new GTop.glibtop_mem();
@@ -360,7 +360,7 @@ export const MemMonitor = GObject.registerClass(
                 this.menuSwapUsage.text = `${(this.memUsage.swap * 100).toFixed(0)}%`;
                 this.menuSwapSize.text = `${(this.memUsage.swapUsed / KB_PER_GB).toFixed(1)} GB of ${(this.memUsage.swapSize / KB_PER_GB).toFixed(1)} GB`;
             }).catch(err => {
-                console.error(`[TopHat] Error reading /proc/meminfo: ${err}`);
+                console.error(`[TopHat Disk] Error reading /proc/meminfo: ${err}`);
                 this.hasProc = false;
             });
         }
