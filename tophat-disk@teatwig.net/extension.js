@@ -92,7 +92,8 @@ class TopHat {
             break;
         case MenuPosition.RIGHT:
             box = 'right';
-            position = 0;
+            // so it shows to the right of regular TopHat
+            position = 1;
             break;
         case MenuPosition.RIGHT_EDGE:
             box = 'right';
